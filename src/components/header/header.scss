@@ -1,0 +1,20 @@
+.weather-header {
+    width: 150vw;
+    height: 150vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 3rem 0;
+    background: linear-gradient(to bottom, #fff 10%, #054cff 90%, #86c5ff 100%);
+    position: absolute;
+    top: -141vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    &__heading {
+        font-size: 5rem;
+        font-weight: 800;
+        text-align: center;
+        color: #fff;
+    }
+}
