@@ -1,0 +1,79 @@
+.current {
+    width: 100%;
+    margin-top: 5rem;
+    &-weather {
+        order: 2;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &-center {
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            order: 2;
+            &__last-updated {
+                font-size: 1.2rem;
+                text-align: center;
+                line-height: 1.8;
+                span {
+                    color: #2291ff;
+                }
+            }
+            &__location {
+                font-size: 2.5rem;
+                font-weight: 800;
+                padding: 1rem 2rem;
+                border-radius: 10px;
+                color: #fff;
+                background: linear-gradient(to top left, #60adf9, #aad5ff);
+                text-align: center;
+            }
+            &__temperature { 
+                font-size: 4rem;
+                font-weight: 200;
+            }
+        }
+        &-left, &-right {
+            // width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+            // visibility: none;
+            // opacity: 0;
+            transform: scale(1.2);
+            transition: all 0.3s;
+            p {
+                width: 10rem;
+                height: 10rem;
+                font-size: 1.6rem;
+                font-weight: 300;
+                color: #000;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                box-shadow: 0.2rem 0.2rem 0.4rem #33b3fc;
+            }
+            span {
+                font-size: 1.4rem;
+                font-weight: 800;
+                color: #00a2ff;
+            }
+        }
+        &-right {
+            order: 3;
+        }
+    }
+    
+    .active {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

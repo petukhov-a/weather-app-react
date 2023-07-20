@@ -14,5 +14,10 @@
         0.2rem 0.2rem 0.4rem #83bef9;
         border-radius: 10px;
         transition: all 0.2s;
+        &:focus {
+            box-shadow: -0.3rem 0.3rem 0.5rem #83bef9,
+            0.3rem 0.3rem 0.5rem #83bef9;
+            transform: scale(1.01);
+        }
     }
 }
