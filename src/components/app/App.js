@@ -1,8 +1,12 @@
 import Header from "../header/Header";
+import SearchForm from "../searchForm/searchForm";
 
 const App = () => {
     return (
-        <Header/>
+        <div className="weather-app">
+            <Header/>
+            <SearchForm/>
+        </div>
     );
 }
 
