@@ -4,35 +4,23 @@ import WeatherService from "../../services/WeatherService";
 
 const CurrentWeather = (props) => {
     const weatherService = new WeatherService();
-
-    const [currentWeather, setCurrentWeather] = useState();
+    const [currentWeather, setCurrentWeather] = useState({});
     const [location, setLocation] = useState('Moscow');
 
-    const onWeatherLoaded = (weather) => {
-        setCurrentWeather(weather);
-    }
+    useEffect(() => {
+        onRequest();
+    }, []);
 
-    weatherService.getCurrentWeather(location)
-        .then(onWeatherLoaded);
+    const onCurrentWeatherLoaded = (dataWeather) => {
+        setCurrentWeather(dataWeather);
+    }
 
     console.log(currentWeather);
 
-    // function onCurrentWeatherLoaded(weather) {
-    //     setCurrentWeather(weather);
-    // }
-
-    // function getCurrentWeather() {
-    //     weatherService.getCurrentWeather(location)
-    //         .then(onCurrentWeatherLoaded);
-    // }
-
-    // useEffect(() => {
-    //     const getCurrentWeather = () => {
-    //         const weather = weatherService.getCurrentWeather(location);
-    //         console.log(weather);
-    //     }
-    //     getCurrentWeather();
-    // }, []);
+    const onRequest = () => {
+        weatherService.getCurrentWeather(location)
+            .then(onCurrentWeatherLoaded);
+    }
 
     return (
         <div className="current">
@@ -41,7 +29,7 @@ const CurrentWeather = (props) => {
                     <p className="current-weather-center__last-updated"><span>Last updated</span><br/>12-08-2023</p>
                     <p className="current-weather-center__location">{location}</p>
                     <img className="current-weather-center__icon-img"/>
-                    <p className="current-weather-center__temperature">{currentWeather}°C</p>
+                    <p className="current-weather-center__temperature">{currentWeather.temp_c}°C</p>
                 </div>
                 <div className="current-weather-left">
                     <p className="current-weather-left__feels"><span>Feels like</span>100</p>
@@ -55,10 +43,6 @@ const CurrentWeather = (props) => {
             </div>
         </div>
     );
-}
-
-const temperature = () => {
-
 }
 
 export default CurrentWeather;
