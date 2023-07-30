@@ -2,10 +2,9 @@ import {useState ,useEffect, useCallback} from 'react';
 import './currentWeather.scss';
 import WeatherService from "../../services/WeatherService";
 
-const CurrentWeather = (props) => {
+const CurrentWeather = ({location}) => {
     const weatherService = new WeatherService();
     const [currentWeather, setCurrentWeather] = useState({});
-    const [location, setLocation] = useState('Moscow');
 
     useEffect(() => {
         onRequest();
@@ -14,8 +13,6 @@ const CurrentWeather = (props) => {
     const onCurrentWeatherLoaded = (dataWeather) => {
         setCurrentWeather(dataWeather);
     }
-
-    console.log(currentWeather);
 
     const onRequest = () => {
         weatherService.getCurrentWeather(location)

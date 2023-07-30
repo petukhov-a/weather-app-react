@@ -1,6 +1,6 @@
 .current {
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 10rem;
     &-weather {
         order: 2;
         position: relative;
@@ -48,9 +48,9 @@
             transform: scale(1.2);
             transition: all 0.3s;
             p {
-                width: 10rem;
-                height: 10rem;
-                font-size: 1.6rem;
+                width: 9rem;
+                height: 9rem;
+                font-size: 1.4rem;
                 font-weight: 300;
                 color: #000;
                 border-radius: 50%;
@@ -62,7 +62,7 @@
                 box-shadow: 0.2rem 0.2rem 0.4rem #33b3fc;
             }
             span {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 font-weight: 800;
                 color: #00a2ff;
             }
