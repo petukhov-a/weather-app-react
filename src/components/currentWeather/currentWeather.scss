@@ -1,6 +1,7 @@
 .current {
     width: 100%;
-    margin-top: 10rem;
+    margin-top: 8rem;
+    height: 25rem;
     &-weather {
         order: 2;
         position: relative;
@@ -8,13 +9,15 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        cursor: pointer;
         &-center {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
             order: 2;
+            button {
+                cursor: pointer;
+            }
             &__last-updated {
                 font-size: 1.2rem;
                 text-align: center;
@@ -37,20 +40,18 @@
                 font-weight: 200;
             }
         }
-        &-left, &-right {
-            // width: calc(100% / 3);
+        &-side {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 4rem;
-            // visibility: none;
-            // opacity: 0;
+            opacity: 0;
             transform: scale(1.2);
-            transition: all 0.3s;
+            transition: all 0.2s;
             p {
-                width: 9rem;
-                height: 9rem;
-                font-size: 1.4rem;
+                width: 10rem;
+                height: 10rem;
+                font-size: 1.6rem;
                 font-weight: 300;
                 color: #000;
                 border-radius: 50%;
@@ -62,7 +63,7 @@
                 box-shadow: 0.2rem 0.2rem 0.4rem #33b3fc;
             }
             span {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 font-weight: 800;
                 color: #00a2ff;
             }
