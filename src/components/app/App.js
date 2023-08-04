@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../header/Header";
 import SearchForm from "../searchForm/searchForm";
-import CurrentWeather from "../currentWeather/CurrentWeather";
+import Weather from "../weather/Weather";
 
 const App = () => {
 
@@ -15,7 +15,7 @@ const App = () => {
         <div className="weather-app">
             <Header/>
             <SearchForm onLocationInput={onLocationInput}/>
-            <CurrentWeather location={location}/>
+            <Weather location={location}/>
         </div>
     );
 }

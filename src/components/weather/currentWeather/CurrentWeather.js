@@ -1,6 +1,6 @@
 import {useState ,useEffect, useCallback} from 'react';
 import './currentWeather.scss';
-import WeatherService from "../../services/WeatherService";
+import WeatherService from "../../../services/WeatherService";
 
 const CurrentWeather = ({location}) => {
     const weatherService = new WeatherService();
